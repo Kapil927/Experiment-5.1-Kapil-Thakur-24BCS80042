@@ -1,4 +1,7 @@
+// ProductInput.jsx
 import { useState } from "react";
+
+const BASE_URL = "https://products-el0c.onrender.com";
 
 const ProductInput = ({ getProducts }) => {
   const [form, setForm] = useState({
@@ -18,7 +21,7 @@ const ProductInput = ({ getProducts }) => {
       return;
     }
 
-    fetch("/api/products", {
+    fetch(`${BASE_URL}/api/products`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -53,16 +56,16 @@ const ProductInput = ({ getProducts }) => {
         value={form.quantity} 
         onChange={handleChange} 
       />
-<select name="category" value={form.category} onChange={handleChange}>
-  <option value="">Select Category</option>
-  <option value="Electronics">Electronics</option>
-  <option value="Clothing">Clothing</option>
-  <option value="Food">Food</option>
-  <option value="Books">Books</option>
-  <option value="Furniture">Furniture</option>
-  <option value="Sports">Sports</option>
-  <option value="Others">Others</option>
-</select>
+      <select name="category" value={form.category} onChange={handleChange}>
+        <option value="">Select Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Food">Food</option>
+        <option value="Books">Books</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Sports">Sports</option>
+        <option value="Others">Others</option>
+      </select>
 
       <button onClick={addProduct}>Add Product</button>
     </div>

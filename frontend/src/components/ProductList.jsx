@@ -8,8 +8,7 @@ const ProductList = ({ products, deleteProduct }) => {
             <span>Price: ${p.price}</span>
             <span>Qty: {p.quantity}</span>
             <span>Category: {p.category}</span>
-            <div className="card-buttons">
-              {/* future Edit button can go here */}
+            <div className="card-buttons" style={{ display: "flex", justifyContent: "flex-end", gap: "5px" }}>
               <button onClick={() => deleteProduct(p._id)}>Delete</button>
             </div>
           </div>
