@@ -41,7 +41,7 @@ const Product = () => {
           <p><strong>UID:</strong> 24BCS80042 | <strong>Section:</strong> 625 | <strong>Group:</strong> A</p>
           <p><strong>Under Guidance of:</strong> Mayank Sharma</p>
         </div>
-        <h1 className="header">Product CRUD</h1>
+        <h1 className="header">Products</h1>
       </div>
 
       <ProductInput getProducts={getProducts} />
